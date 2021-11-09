@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.base", // no need to add the .json extension
+  "compilerOptions": {
+    "removeComments": true
+  },
+  "include": [
+    "./**/*.ts"
+  ]
+}

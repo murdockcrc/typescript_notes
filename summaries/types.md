@@ -168,8 +168,9 @@ For complex assertions which the compiler fails (but you know are valid):
 const a = (expr as any) as T;
 ```
 
-# null and undefined
+# null, undefined, never and any
 
+## null
 The general recommendation is to enable `strictNullChecks`.
 
 If a propery can be null, use union and narrowing to support it:
@@ -193,6 +194,17 @@ function liveDangerously(x?: number | null) {
 }
 ```
 
+## undefined
+
+Uninitialized value.
+
+## never
+
+Used for variables / functions which will never return. The usage of this type is not very common. Example: a function which always throws an error, or which enters into an infinite loop.
+
+## any
+
+Example: use this when a 3rd party library does not guarantee a specific return type for a function.
 # Functions
 
 ## <a name='Parametertypes'></a>Parameter types

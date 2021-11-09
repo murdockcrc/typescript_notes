@@ -8,6 +8,14 @@ Add the `watch: true` compiler option so TSC recompiles everytime a file change 
 
 `tsc` will look for a `tsconfig.json` file in the local directory. If it does not find one, it will traverse the folder structure until it finds one.
 
+## Inheritance
+
+Multiple tsconfig files can be used across the project (they inherit from each other). Example:
+
+**Base file**: src/tsconfig.base.json
+
+**Inheriting file**: src/app/tsconfig.json
+
 # Modules
 
 The `tsconfig.json` file has a property called `module`. Use this to define how the compiled JS code will deal with modules (CommonsJS, ES2015, or others.)
