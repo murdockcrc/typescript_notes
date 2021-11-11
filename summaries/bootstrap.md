@@ -19,3 +19,9 @@ Force `strict` behavior:
 ```js
 tsc --strict
 ```
+
+Disallow implcit `any`. You can still annotate a variable with `any`, but any implicit `any`'s will be disallowed:
+
+```js
+tsc --noImplicitAny
+```
