@@ -59,7 +59,7 @@ class Derived extends Base {
 }
 ```
 
-## Methods
+# Methods
 
 Same syntax support as for constructors:
 
@@ -78,7 +78,7 @@ class Base {
 }
 ```
 
-## Accessors
+# Accessors
 
 Use them only if you need to add extra logic to the process of getting/setting these values. Otherwise, this pattern is uncommon and not useful in Javascript.
 
@@ -96,5 +96,40 @@ class Base {
   set id(input) {
     this._id = input
   }
+}
+```
+
+# Private properties
+
+The `private` keyword is just a compile-time restriction. At runtime, an external piece of code can still access properties with this accessor modifier.
+ECMAScript2015 added support for real private properties (prefixed with a #).
+
+```js
+class Exam {
+    id: number
+    private seniority: string
+    #salary: number
+}
+```
+
+# Classes and interfaces
+
+```js
+interface Exam {
+    id: number,
+    author: string
+    booking: (name: string) => string
+}
+
+class WebExam implements Exam {
+    id: number
+    author: string
+    booking = (name: string) => 'not_useful'
+
+    constructor() {
+        this.id = 1
+        this.author = 'some_name'
+        console.log(this.booking(''))
+    }
 }
 ```
