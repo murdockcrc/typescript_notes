@@ -59,6 +59,31 @@ class Derived extends Base {
 }
 ```
 
+## Variable declaration
+
+Instead of having this:
+
+```js
+class Manager {
+  name: string
+
+  constructor(name: string) {
+    this.name = name
+  }
+}
+```
+
+Declare the public property in the constructor:
+
+```js
+class Manager {
+  // name: string // This line becomes redundant
+  constructor(public name: string) {
+    // this.name = name  // becomes redundant
+  }
+}
+```
+
 # Methods
 
 Same syntax support as for constructors:
@@ -132,4 +157,23 @@ class WebExam implements Exam {
         console.log(this.booking(''))
     }
 }
+```
+
+# Static members
+
+```js
+class Manager {
+  name: string
+  static owner: string
+  static printMe() {
+    console.log(Manager.owner)  // Access static prop by calling from the Class
+    return 'printMe'
+  }
+
+  constructor() {
+    this.name = 'name'
+  }
+}
+
+Manager.printMe() // Access static prop by calling from the Class
 ```
