@@ -177,3 +177,14 @@ class Manager {
 
 Manager.printMe() // Access static prop by calling from the Class
 ```
+
+# Abstract classes
+
+Cant instantiate them. Only used for inheritance.
+
+```js
+abstract class Account {
+  abstract name: string       // Child must implement this
+  id: number                  // Child get this for free, no implementation needed
+}
+```
