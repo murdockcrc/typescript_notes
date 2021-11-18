@@ -1,0 +1,28 @@
+{
+  "name": "luisdel_notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": { },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "scripts": {
+    "webpack": "webpack",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murdockcrc/typescript_notes.git"
+  },
+  "author": "Luis Delgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murdockcrc/typescript_notes/issues"
+  },
+  "homepage": "https://github.com/murdockcrc/typescript_notes#readme"
+}

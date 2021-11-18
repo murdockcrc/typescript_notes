@@ -2,6 +2,15 @@
 
 [Full usage reference](https://www.typescriptlang.org/tsconfig)
 
+Recommended options:
+[tsconfig/bases](https://github.com/tsconfig/bases)
+
+When using these recommended configs, your `tsconfig.json` must extend it. This is done by adding the following to your file:
+
+```
+"extends": "@tsconfig/xxx/tsconfig.json"
+```
+
 Replace the CLI commands of `tsc` with parameters in this config file.
 
 To auto-generate this file, run `tsc --init`
@@ -9,6 +18,14 @@ To auto-generate this file, run `tsc --init`
 Add the `watch: true` compiler option so TSC recompiles everytime a file change is detected.
 
 `tsc` will look for a `tsconfig.json` file in the local directory. If it does not find one, it will traverse the folder structure until it finds one.
+
+## ECMAScript versions
+
+* ES3: super legacy
+* ES6: most modern browers. May face issues in enterprise environments where browsers and OSs might be very out of date.
+* ESnext: the latest
+
+There other options available, however these are the most common ones.
 
 ## Inheritance
 
