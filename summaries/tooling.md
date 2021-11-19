@@ -74,3 +74,11 @@ Use references to link to other TS projects, without the need to compile them ev
 ## Write your own declarations
 
 Encapsulate non-TS code with typing information, without having to rewrite the legacy code in TS. For an example, see [HERE](src/lib/language.d.ts)
+
+# Source files
+
+Options:
+
+* Generate a source map per file
+* Generate one big file with all source maps
+* Embed the source map into the generated file
