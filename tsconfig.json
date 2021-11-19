@@ -1,4 +1,9 @@
 {
+  "references": [
+    {
+      "path": "./src/interfaces"
+    }
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 

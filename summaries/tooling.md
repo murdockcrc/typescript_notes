@@ -60,3 +60,17 @@ Additional files will be compiled if they are references from TS files included 
 ```
 /// <reference path="path_to_another_ts_file" />
 ```
+
+# References
+
+Use references to link to other TS projects, without the need to compile them every time. These references must have their own `tsconfig.json` file with the option `composite` enabled. For an example, see [HERE](src/interfaces/index.ts)
+
+# Declaration files
+
+## Community driven
+
+[DefinitivelyTyped](https://definitelytyped.org/)
+
+## Write your own declarations
+
+Encapsulate non-TS code with typing information, without having to rewrite the legacy code in TS. For an example, see [HERE](src/lib/language.d.ts)
