@@ -84,3 +84,13 @@ Options:
 * Embed the source map into the generated file
 
 Activate the parameter `"sourceMap": true,` in the compiler options. Also, you might need to set this up in webpack (or whatever you are using): `devtool: 'eval-source-map'`
+
+# ESLint
+
+Required packages:
+
+* eslint 
+* @typescript-eslint/eslint-plugin 
+* @typescript-eslint/parser
+
+For a sample configuration file, see [HERE](.eslintrc.js)

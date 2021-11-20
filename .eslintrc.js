@@ -3,7 +3,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020
   },
-  extends: [
+  extends: [              // Take a recommended file as a starting point, override yourself later
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended"
   ],
