@@ -75,10 +75,12 @@ Use references to link to other TS projects, without the need to compile them ev
 
 Encapsulate non-TS code with typing information, without having to rewrite the legacy code in TS. For an example, see [HERE](src/lib/language.d.ts)
 
-# Source files
+# Source map files
 
 Options:
 
 * Generate a source map per file
 * Generate one big file with all source maps
 * Embed the source map into the generated file
+
+Activate the parameter `"sourceMap": true,` in the compiler options. Also, you might need to set this up in webpack (or whatever you are using): `devtool: 'eval-source-map'`
