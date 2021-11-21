@@ -103,3 +103,35 @@ test<Array<string>, Array<number>>(a, b)
 ```
 
 Using more than 1 type parameter is highly unusual, as the complexity of the abstraction increases.
+
+# Generic classes
+
+You can't use generics on static members, only on instances of the class.
+
+A generic class can implement a generic interface. The types of both must match.
+
+Type constraints can be implemented too:
+
+```js
+interface NamedObject {
+    id: string
+    name: string
+}
+
+class Person<T extends NamedObject> {
+
+    constructor(public id: string, public name: string, public nationality: string) { }
+
+    requestName(request: T): string {
+        return request.name
+    }
+}
+
+const t = {
+    id: "001",
+    name: "name"
+}
+
+const x = new Person<NamedObject>(t.id, t.name, 'costa rican')
+x.requestName(t)
+```
