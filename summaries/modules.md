@@ -53,3 +53,23 @@ import { StaffMember as Coworker } from './person'
 ```js
 import * as Team from './person'
 ```
+
+# Loading JSON files as modules
+
+Requires the compiler option `resolveJsonModule: true`. This work in Node modules resolution only. Browsers do not allow loading non-JS files. You'll need a loader like webpack to packge it up.
+
+# Aliasing
+
+Used together with the compiler option `baseUrl`. Used to shorten very long module paths. Example:
+
+```json
+{
+    "paths": {
+        "deep/*": ["./some/deeper/components/folder/*"]
+    }
+}
+```
+
+# Virtual directories
+
+Used to merge more than one root directory for the compiler.

@@ -73,7 +73,13 @@ Use references to link to other TS projects, without the need to compile them ev
 
 ## Write your own declarations
 
-Encapsulate non-TS code with typing information, without having to rewrite the legacy code in TS. For an example, see [HERE](src/lib/language.d.ts)
+Encapsulate non-TS code with typing information, without having to rewrite the legacy code in TS. For an example, see [HERE](src/lib/language.d.ts). The declaration file (before the .d.ts extension) must be the same as the filename of the file is describes.
+
+## Augmentations
+
+If the declaration file does not include something which the JS source does, you can augment the declaration in line. See [HERE](src/Main.ts) for an example. TS will merge the definition in the declaration file together with this inline declaration augmentation.
+
+The same can be done at the global level, by using `declare global`.
 
 # Source map files
 

@@ -146,7 +146,7 @@ interface Point {
 }
 ```
 
-### <a name='Typesvsinterfaces'></a>Types vs interfaces
+### Types vs interfaces
 
 Both can be extended.
 

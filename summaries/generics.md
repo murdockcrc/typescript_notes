@@ -83,3 +83,55 @@ function createInstance<A extends Animal>(c: new () => A): A {
 let a = createInstance(Lion);
 let b = createInstance(Bee);
 ```
+
+# Using multiple types
+
+More than one type can be specified by using ',':
+
+```js
+function test<T, V>(x: T, y: V): T {
+    const var1: T = getXFromDb(x)
+    const var2: V = getVFromDb(y)
+
+    return x
+}
+
+const a: Array<string> = ['Microsoft']
+const b: Array<number> = [10]
+
+test<Array<string>, Array<number>>(a, b)
+```
+
+Using more than 1 type parameter is highly unusual, as the complexity of the abstraction increases.
+
+# Generic classes
+
+You can't use generics on static members, only on instances of the class.
+
+A generic class can implement a generic interface. The types of both must match.
+
+Type constraints can be implemented too:
+
+```js
+interface NamedObject {
+    id: string
+    name: string
+}
+
+class Person<T extends NamedObject> {
+
+    constructor(public id: string, public name: string, public nationality: string) { }
+
+    requestName(request: T): string {
+        return request.name
+    }
+}
+
+const t = {
+    id: "001",
+    name: "name"
+}
+
+const x = new Person<NamedObject>(t.id, t.name, 'costa rican')
+x.requestName(t)
+```
