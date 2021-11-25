@@ -1,3 +1,7 @@
+# Strict mode
+
+Any file with an `import` or `export` statement will be treated as a module. As such, they will be evaluated in `strict` mode. This is why, when refactoring legacy code into a module, it may not run anymore. The code was not writte in strict mode, but as a module, it is now being evaluated as such.
+
 # Export declarations
 
 ```js
